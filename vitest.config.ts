@@ -8,15 +8,10 @@ import AutoImport from 'unplugin-auto-import/vite';
 export default defineConfig({
   plugins: [
     vue(),
-    AutoImport({ imports: ['vue'], dts: 'src/types/auto-imports.d.ts' }),
+    AutoImport({ imports: ['vue'], dts: 'types/auto-imports.d.ts' }),
   ],
   test: {
     globals: true,
     environment: 'jsdom',
-  },
-  resolve: {
-    alias: {
-      '@': '/src',
-    },
   },
 });

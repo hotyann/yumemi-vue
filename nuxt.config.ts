@@ -1,10 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  nitro: {
-    preset: 'node',
-  },
-  devServer: {
-    host: '0.0.0.0',
+  runtimeConfig: {
+    public: {
+      API_BASE_URL: 'https://yumemi-frontend-engineer-codecheck-api.vercel.app',
+    },
+    API_KEY: '8FzX5qLmN3wRtKjH7vCyP9bGdEaU4sYpT6cMfZnJ',
   },
   typescript: {
     tsConfig: {
@@ -14,7 +14,6 @@ export default defineNuxtConfig({
       },
     },
   },
-  srcDir: 'src',
   modules: ['@nuxtjs/tailwindcss'],
   tailwindcss: {
     exposeConfig: true,

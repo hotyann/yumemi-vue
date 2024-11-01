@@ -61,11 +61,6 @@ module.exports = {
             group: 'builtin',
             position: 'before',
           },
-          {
-            pattern: '@src/**',
-            group: 'parent',
-            position: 'before',
-          },
         ],
         'pathGroupsExcludedImportTypes': ['builtin'],
         'alphabetize': {
