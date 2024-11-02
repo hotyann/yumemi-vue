@@ -46,7 +46,7 @@
 </script>
 
 <template>
-  <div>
+  <NuxtLayout name="header">
     <!-- 都道府県リスト -->
     <PrefectureContent
       :data="res.result"
@@ -54,5 +54,5 @@
     />
     <!-- 人口構成グラフ -->
     <PopulationGraph :data="graphData" />
-  </div>
+  </NuxtLayout>
 </template>

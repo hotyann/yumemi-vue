@@ -26,9 +26,9 @@
 </script>
 
 <template>
-  <div>
+  <article>
     <h1>都道府県</h1>
-    <div class="flex flex-wrap">
+    <section class="flex flex-wrap">
       <PrefectureItem
         v-for="item in data"
         :key="item.prefCode"
@@ -36,6 +36,6 @@
         :pref-name="item.prefName"
         @checkbox-change="onCheckboxChanged"
       />
-    </div>
-  </div>
+    </section>
+  </article>
 </template>

@@ -13,8 +13,9 @@ https://hotyann.github.io/yumemi-vue/
 | [Initial commit](https://github.com/hotyann/yumemi-vue/commit/8221a59a79d8d824b9e68fbb9fd70611674069d8)                             |              |  1h  |
 | [Added configuration file of Github Actions](https://github.com/hotyann/yumemi-vue/commit/767c91a7c4930f14b7e044e1cbb7ca24b39c3664) |              |  1h  |
 | [Checked availability of yumemi APIs](https://github.com/hotyann/yumemi-vue/commit/ea1351a417ca81c2371353124a7fdc225d3f8d9c)        |      ○       |  2h  |
-| [Updated layouts and components]()                                                                                                  |      ○       |  4h  |
-| Total                                                                                                                               |              |  8h  |
+| [Updated layouts and components](https://github.com/hotyann/yumemi-vue/commit/a2dcf117727b9ed9cb8e6e8215207da223d26e71)             |      ○       | 3.5h |
+| [Imported highcharts and drew graph]()                                                                                              |      ○       | 1.5h |
+| Total                                                                                                                               |              |  9h  |
 
 ## 参考にしたページ
 
@@ -24,6 +25,7 @@ https://hotyann.github.io/yumemi-vue/
 4. [Deploy Nuxt to GitHub Pages](https://nuxt.com/deploy/github-pages)
 5. [Nuxt3 子から親へのコンポーネント間通信](https://zenn.dev/hisann/articles/5ad7287b652c02)
 6. [Installation - Tailwind CSS](https://tailwindcss.com/docs/installation)
+7. [Highcharts JS API Reference](https://api.highcharts.com/highcharts/)
 
 ## 参考にしたリポジトリ
 
