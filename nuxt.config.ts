@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     },
     API_KEY: '8FzX5qLmN3wRtKjH7vCyP9bGdEaU4sYpT6cMfZnJ',
   },
+  app: {
+    baseURL: '/yumemi-vue/',
+  },
   typescript: {
     tsConfig: {
       extends: '@tsconfig/strictest/tsconfig.json',
