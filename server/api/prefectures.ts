@@ -2,9 +2,9 @@ export default defineEventHandler(async (event) => {
   try {
     const config = useRuntimeConfig();
     const result = await $fetch('/api/v1/prefectures', {
-      baseURL: config.public.API_BASE_URL,
+      baseURL: config.public.baseURL,
       headers: {
-        'X-API-KEY': config.API_KEY,
+        'X-API-KEY': config.public.apiKey,
       },
     });
     return result;

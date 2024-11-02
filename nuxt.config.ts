@@ -3,9 +3,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   runtimeConfig: {
     public: {
-      API_BASE_URL: 'https://yumemi-frontend-engineer-codecheck-api.vercel.app',
+      baseURL: 'https://yumemi-frontend-engineer-codecheck-api.vercel.app',
+      apiKey: '8FzX5qLmN3wRtKjH7vCyP9bGdEaU4sYpT6cMfZnJ',
     },
-    API_KEY: '8FzX5qLmN3wRtKjH7vCyP9bGdEaU4sYpT6cMfZnJ',
   },
   app: {
     baseURL: '/yumemi-vue/',
