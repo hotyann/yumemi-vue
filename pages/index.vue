@@ -12,7 +12,15 @@
   }
 
   // 都道府県データです
-  let res: any = await $fetch('/api/prefectures');
+  // TODO: APIをラップして、エラー処理を統一的に行います
+  // const res: any = await $fetch('/api/prefectures');
+  const config = useRuntimeConfig();
+  const res: any = await $fetch('/api/v1/prefectures', {
+    baseURL: config.public.baseURL,
+    headers: {
+      'X-API-KEY': config.public.apiKey,
+    },
+  });
   // 人口構成データです
   const graphData: Array<IGraphData> = reactive([]);
 
@@ -23,7 +31,17 @@
   const onCheckboxChanged = async (params: IParams) => {
     if (params.isChecked) {
       // チェックボックスが選択された時、人口構成データを取得します
-      const res: any = await $fetch('/api/population', {
+      // TODO: APIをラップして、エラー処理を統一的に行います
+      // const res: any = await $fetch('/api/population', {
+      //   query: {
+      //     prefCode: params.prefCode,
+      //   },
+      // });
+      const res: any = await $fetch(`/api/v1/population/composition/perYear`, {
+        baseURL: config.public.baseURL,
+        headers: {
+          'X-API-KEY': config.public.apiKey,
+        },
         query: {
           prefCode: params.prefCode,
         },

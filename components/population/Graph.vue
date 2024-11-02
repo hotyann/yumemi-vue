@@ -85,6 +85,9 @@
       credits: {
         enabled: false,
       },
+      accessibility: {
+        enabled: false,
+      },
     };
   });
 </script>
@@ -92,7 +95,9 @@
 <template>
   <article>
     <section>
-      <highcharts :options="chartOptions" />
+      <ClientOnly>
+        <highcharts :options="chartOptions" />
+      </ClientOnly>
     </section>
   </article>
 </template>

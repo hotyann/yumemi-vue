@@ -3,9 +3,9 @@ export default defineEventHandler(async (event) => {
     const config = useRuntimeConfig();
     const query = getQuery(event);
     const result = await $fetch(`/api/v1/population/composition/perYear`, {
-      baseURL: config.public.API_BASE_URL,
+      baseURL: config.public.baseURL,
       headers: {
-        'X-API-KEY': config.API_KEY,
+        'X-API-KEY': config.public.apiKey,
       },
       query,
     });
