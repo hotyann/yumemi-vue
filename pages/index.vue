@@ -1,33 +1,58 @@
 <script lang="ts" setup>
-  const currentCode = useState('currentCode', () => 0);
-  const currentName = useState('currentName', () => '');
+  // Interfaces
+  interface IParams {
+    prefCode: number;
+    prefName: string;
+    isChecked: boolean;
+  }
+  interface IGraphData {
+    prefCode: number;
+    prefName: string;
+    data: IPopulationPerYear;
+  }
 
-  const { data } = useFetch('/api/prefectures');
+  // 都道府県データです
+  let res: any = await $fetch('/api/prefectures');
+  // 人口構成データです
+  const graphData: Array<IGraphData> = reactive([]);
+
+  /**
+   * チェックボックスの選択が変更された時のデータ処理についてです
+   * @param {IParams} params prefCode、prefName、isCheckedを含んでいます
+   */
+  const onCheckboxChanged = async (params: IParams) => {
+    if (params.isChecked) {
+      // チェックボックスが選択された時、人口構成データを取得します
+      const res: any = await $fetch('/api/population', {
+        query: {
+          prefCode: params.prefCode,
+        },
+      });
+      graphData.push({
+        prefCode: params.prefCode,
+        prefName: params.prefName,
+        data: res.result,
+      });
+    } else {
+      // 選択が解除された時、データを削除します
+      const index = graphData.findIndex(
+        (item: IGraphData) => item.prefCode === params.prefCode
+      );
+      if (index > -1) {
+        graphData.splice(index, 1);
+      }
+    }
+  };
 </script>
 
 <template>
-  <div>
-    <h1>都道府県の人口構成</h1>
-    <h2>都道府県</h2>
-    <div class="flex">
-      <PrefectureItem
-        v-for="item in data.result"
-        :key="item.prefCode"
-        :pref-code="item.prefCode"
-        :pref-name="item.prefName"
-        @click="
-          currentCode = item.prefCode;
-          currentName = item.prefName;
-        "
-      />
-    </div>
-    <PopulationGraph />
-  </div>
+  <NuxtLayout name="header">
+    <!-- 都道府県リスト -->
+    <PrefectureContent
+      :data="res.result"
+      @checkbox-change="onCheckboxChanged"
+    />
+    <!-- 人口構成グラフ -->
+    <PopulationGraph :data="graphData" />
+  </NuxtLayout>
 </template>
-
-<style scoped>
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
-  }
-</style>
