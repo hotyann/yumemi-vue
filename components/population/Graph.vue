@@ -93,7 +93,7 @@
 </script>
 
 <template>
-  <article>
+  <article v-if="data.length">
     <section>
       <ClientOnly>
         <highcharts :options="chartOptions" />

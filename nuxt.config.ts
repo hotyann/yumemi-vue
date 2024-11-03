@@ -9,6 +9,11 @@ export default defineNuxtConfig({
   },
   app: {
     baseURL: '/yumemi-vue/',
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/yumemi-vue/favicon.ico' },
+      ],
+    },
   },
   typescript: {
     tsConfig: {

@@ -2,21 +2,24 @@
 
 [フロントエンドコーディング試験](https://yumemi.notion.site/0e9ef27b55704d7882aab55cc86c999d)
 
+Tech Stack: Nuxt 3 + Typescript + Axios + Highcharts + Vitest + Tailwind CSS
+
 ## デプロイ先の URL
 
 https://hotyann.github.io/yumemi-vue/
 
 ## プログラミング歴
 
-| Commit                                                                                                                                                 | Web Frontend | Time |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | :----------: | :--: |
-| [Initial commit](https://github.com/hotyann/yumemi-vue/commit/8221a59a79d8d824b9e68fbb9fd70611674069d8)                                                |              |  1h  |
-| [Added configuration file of Github Actions](https://github.com/hotyann/yumemi-vue/commit/767c91a7c4930f14b7e044e1cbb7ca24b39c3664)                    |              |  1h  |
-| [Checked availability of yumemi APIs](https://github.com/hotyann/yumemi-vue/commit/ea1351a417ca81c2371353124a7fdc225d3f8d9c)                           |      ○       |  2h  |
-| [Updated layouts and components](https://github.com/hotyann/yumemi-vue/commit/a2dcf117727b9ed9cb8e6e8215207da223d26e71)                                |      ○       | 3.5h |
-| [Imported highcharts and drew graph](https://github.com/hotyann/yumemi-vue/commit/df013ff1762354569d8356efecd97004e678c0bb)                            |      ○       | 1.5h |
-| [Modified baseURL of Nuxt App configuration](https://github.com/hotyann/yumemi-vue/commit/e594346cc07382a3a2800517dd11869ee2ed2ab3)<br/>[Fixed Bugs]() |      ○       |  2h  |
-| Total                                                                                                                                                  |              | 11h  |
+| Commit                                                                                                                                                                                                                                      | Web Frontend | Time  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------: | :---: |
+| [Initial commit](https://github.com/hotyann/yumemi-vue/commit/8221a59a79d8d824b9e68fbb9fd70611674069d8)                                                                                                                                     |              |  1h   |
+| [Added configuration file of Github Actions](https://github.com/hotyann/yumemi-vue/commit/767c91a7c4930f14b7e044e1cbb7ca24b39c3664)                                                                                                         |              |  1h   |
+| [Checked availability of yumemi APIs](https://github.com/hotyann/yumemi-vue/commit/ea1351a417ca81c2371353124a7fdc225d3f8d9c)                                                                                                                |      ○       |  2h   |
+| [Updated layouts and components](https://github.com/hotyann/yumemi-vue/commit/a2dcf117727b9ed9cb8e6e8215207da223d26e71)                                                                                                                     |      ○       | 3.5h  |
+| [Imported highcharts and drew graph](https://github.com/hotyann/yumemi-vue/commit/df013ff1762354569d8356efecd97004e678c0bb)                                                                                                                 |      ○       | 1.5h  |
+| [Modified baseURL of Nuxt App configuration](https://github.com/hotyann/yumemi-vue/commit/e594346cc07382a3a2800517dd11869ee2ed2ab3)<br/>[Fixed Bugs](https://github.com/hotyann/yumemi-vue/commit/575b3f225a3ddb06ca38c6e6499dc687b3489083) |      ○       |  2h   |
+| [Imported axios and updated favicon.ico]()                                                                                                                                                                                                  |      ○       | 2.5h  |
+| Total                                                                                                                                                                                                                                       |              | 13.5h |
 
 ## 参考にしたページ
 
@@ -27,11 +30,13 @@ https://hotyann.github.io/yumemi-vue/
 5. [Nuxt3 子から親へのコンポーネント間通信](https://zenn.dev/hisann/articles/5ad7287b652c02)
 6. [Installation - Tailwind CSS](https://tailwindcss.com/docs/installation)
 7. [Highcharts JS API Reference](https://api.highcharts.com/highcharts/)
+8. [Getting Started | Axios Docs](https://axios-http.com/docs/intro)
 
 ## 参考にしたリポジトリ
 
 1. [da-shina/nuxt3-resas-app](https://github.com/da-shina/nuxt3-resas-app)
 2. [qucode1/nuxt-api-route-issue](https://github.com/qucode1/nuxt-api-route-issue)
+3. [jcyenyen/Nuxt-investFinancialDashborad](https://github.com/jcyenyen/Nuxt-investFinancialDashborad)
 
 # Nuxt Minimal Starter
 
