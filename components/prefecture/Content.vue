@@ -11,7 +11,7 @@
 
   // Props
   defineProps<{
-    data: Array<IPrefecture>;
+    data: Array<IPrefecture>; // 都道府県データです
   }>();
 
   const emit = defineEmits<IEmits>();

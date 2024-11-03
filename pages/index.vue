@@ -12,6 +12,7 @@
     prefName: string;
     data: IPopulationPerYear;
   }
+
   // 人口構成データです
   const graphData: Array<IGraphData> = reactive([]);
 
@@ -25,7 +26,7 @@
   const onCheckboxChanged = async (params: IParams) => {
     if (params.isChecked) {
       // チェックボックスが選択された時、人口構成データを取得します
-      const res: any = await getPopulationPerYear(params.prefCode.toString());
+      const res: any = await getPopulationPerYear(params.prefCode?.toString());
       graphData.push({
         prefCode: params.prefCode,
         prefName: params.prefName,
@@ -34,7 +35,7 @@
     } else {
       // 選択が解除された時、データを削除します
       const index = graphData.findIndex(
-        (item: IGraphData) => item.prefCode === params.prefCode
+        (item) => item.prefCode === params.prefCode
       );
       if (index > -1) {
         graphData.splice(index, 1);
