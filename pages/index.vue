@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+  import { getPrefectures, getPopulationPerYear } from '~/api';
+
   // Interfaces
   interface IParams {
     prefCode: number;
@@ -11,18 +13,11 @@
     data: IPopulationPerYear;
   }
 
-  // 都道府県データです
-  // TODO: APIをラップして、エラー処理を統一的に行います
-  // const res: any = await $fetch('/api/prefectures');
-  const config = useRuntimeConfig();
-  const res: any = await $fetch('/api/v1/prefectures', {
-    baseURL: config.public.baseURL,
-    headers: {
-      'X-API-KEY': config.public.apiKey,
-    },
-  });
   // 人口構成データです
   const graphData: Array<IGraphData> = reactive([]);
+
+  // 都道府県データを取得します
+  const res: any = await getPrefectures();
 
   /**
    * チェックボックスの選択が変更された時のデータ処理についてです
@@ -31,21 +26,7 @@
   const onCheckboxChanged = async (params: IParams) => {
     if (params.isChecked) {
       // チェックボックスが選択された時、人口構成データを取得します
-      // TODO: APIをラップして、エラー処理を統一的に行います
-      // const res: any = await $fetch('/api/population', {
-      //   query: {
-      //     prefCode: params.prefCode,
-      //   },
-      // });
-      const res: any = await $fetch(`/api/v1/population/composition/perYear`, {
-        baseURL: config.public.baseURL,
-        headers: {
-          'X-API-KEY': config.public.apiKey,
-        },
-        query: {
-          prefCode: params.prefCode,
-        },
-      });
+      const res: any = await getPopulationPerYear(params.prefCode?.toString());
       graphData.push({
         prefCode: params.prefCode,
         prefName: params.prefName,
@@ -54,7 +35,7 @@
     } else {
       // 選択が解除された時、データを削除します
       const index = graphData.findIndex(
-        (item: IGraphData) => item.prefCode === params.prefCode
+        (item) => item.prefCode === params.prefCode
       );
       if (index > -1) {
         graphData.splice(index, 1);

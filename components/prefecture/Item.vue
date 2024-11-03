@@ -11,8 +11,8 @@
 
   // Props
   const props = defineProps<{
-    prefCode: number;
-    prefName: string;
+    prefCode: number; // 都道府県コードです
+    prefName: string; // 都道府県名です
   }>();
 
   // チェックボックスの値です
