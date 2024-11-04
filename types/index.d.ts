@@ -7,7 +7,6 @@ declare global {
   interface IPopulation {
     year: number;
     value: number;
-    rate: number;
   }
 
   interface IPopulationData {

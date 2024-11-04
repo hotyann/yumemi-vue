@@ -24,23 +24,7 @@ module.exports = {
     'no-restricted-imports': [
       'error',
       {
-        patterns: [
-          '../*',
-          '~/*',
-          '~~/*',
-          './assets/*',
-          './components/*',
-          './pages/*',
-          './plugins/*',
-          './router/*',
-          './composables/*',
-          './server/*',
-          './store/*',
-          './types/*',
-          './utils/*',
-          './libs/*',
-          './*.vue',
-        ],
+        patterns: [],
       },
     ],
     'import/order': [

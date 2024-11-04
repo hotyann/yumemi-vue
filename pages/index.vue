@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { getPrefectures, getPopulationPerYear } from '~/api';
+  import { getPrefectures, getPopulationPerYear } from '~/apis';
 
   // Interfaces
   interface IParams {
@@ -47,11 +47,15 @@
 <template>
   <NuxtLayout name="header">
     <!-- 都道府県リスト -->
-    <PrefectureContent
-      :data="res.result"
-      @checkbox-change="onCheckboxChanged"
-    />
+    <div class="flex justify-center mt-8">
+      <PrefectureContent
+        :data="res.result"
+        @checkbox-change="onCheckboxChanged"
+      />
+    </div>
     <!-- 人口構成グラフ -->
-    <PopulationGraph :data="graphData" />
+    <div class="my-8 px-4 md:px-8">
+      <PopulationGraph :data="graphData" />
+    </div>
   </NuxtLayout>
 </template>

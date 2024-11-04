@@ -31,14 +31,19 @@
 </script>
 
 <template>
-  <div>
+  <div class="flex items-center">
     <input
       :id="prefName"
       v-model="isChecked"
+      class="peer cursor-pointer"
       type="checkbox"
       :value="prefCode"
       @change="onChanged"
     />
-    <label :for="prefName">{{ prefName }}</label>
+    <label
+      class="ml-1 cursor-pointer text-gray-600 hover:text-gray-800 peer-hover:text-gray-800"
+      :for="prefName"
+      >{{ prefName }}</label
+    >
   </div>
 </template>
