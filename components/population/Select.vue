@@ -20,7 +20,7 @@
    * @param {any} event change event
    */
   const onChanged = (event: any): void => {
-    emit('update:modelValue', event.target?.value);
+    emit('update:modelValue', event?.target?.value);
   };
 </script>
 

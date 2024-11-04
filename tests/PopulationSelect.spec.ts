@@ -16,7 +16,7 @@ const initializeModelValue = () => {
 
 // Function to test onChanged behavior
 const onChanged = (event: any): void => {
-  emit('update:modelValue', event.target?.value);
+  emit('update:modelValue', event?.target?.value);
 };
 
 describe('Dropdown Component', () => {

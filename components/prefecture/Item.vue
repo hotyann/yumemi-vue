@@ -38,7 +38,7 @@
       v-model="isChecked"
       type="checkbox"
       :value="prefCode"
-      class="mr-1"
+      class="mr-1 cursor-pointer"
       @change="onChanged"
     />
     {{ prefName }}
