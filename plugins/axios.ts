@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import { axiosErrorHandler } from '~/utils/errorHandler';
 
 export default defineNuxtPlugin((nuxtApp) => {

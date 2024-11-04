@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { getPrefectures, getPopulationPerYear } from '~/api';
+  import { getPrefectures, getPopulationPerYear } from '~/apis';
 
   // Interfaces
   interface IParams {

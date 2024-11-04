@@ -58,7 +58,7 @@
           pointInterval = population[1].year - population[0].year;
         }
 
-        let data = [];
+        const data: Array<number | null> = [];
 
         // 境界年まで指定の間隔でデータを生成します
         for (
