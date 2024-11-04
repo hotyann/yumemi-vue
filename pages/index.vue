@@ -18,6 +18,10 @@
 
   // 都道府県データを取得します
   const res: any = await getPrefectures();
+  let result: Array<IPrefecture> = [];
+  if (Array.isArray(res?.result)) {
+    result = res.result;
+  }
 
   /**
    * チェックボックスの選択が変更された時のデータ処理についてです
@@ -34,11 +38,13 @@
     if (params.isChecked) {
       // チェックボックスが選択された時、人口構成データを取得します
       const res: any = await getPopulationPerYear(params.prefCode?.toString());
-      graphData.push({
-        prefCode: params.prefCode,
-        prefName: params.prefName,
-        data: res.result,
-      });
+      if (res?.result) {
+        graphData.push({
+          prefCode: params.prefCode,
+          prefName: params.prefName,
+          data: res.result,
+        });
+      }
     }
   };
 </script>
@@ -47,10 +53,7 @@
   <NuxtLayout name="header">
     <!-- 都道府県リスト -->
     <div class="flex justify-center mt-8">
-      <PrefectureContent
-        :data="res.result"
-        @checkbox-change="onCheckboxChanged"
-      />
+      <PrefectureContent :data="result" @checkbox-change="onCheckboxChanged" />
     </div>
     <!-- 人口構成グラフ -->
     <div class="my-8 px-4 md:px-8 lg:px-12 xl:px-16">
