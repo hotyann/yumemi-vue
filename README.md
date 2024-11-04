@@ -21,7 +21,7 @@ https://hotyann.github.io/yumemi-vue/
 | [Imported axios and updated favicon.ico](https://github.com/hotyann/yumemi-vue/commit/ce782502821b2c93f6a33a5d51ce3f02fb993f7d)                                                                                                            |      ○       | 2.5h |
 | [Completed data optimization and enhanced functionality of graph](https://github.com/hotyann/yumemi-vue/commit/ac0b3dc50bfd7f94833ac1dc9fd69952ca4ec810)                                                                                   |      ○       | 2.5h |
 | [Unit test](https://github.com/hotyann/yumemi-vue/commit/4075950ff6984df8d19c1e1eda951dfaadbf7e01)                                                                                                                                         |              |  2h  |
-| [Updated css style]()                                                                                                                                                                                                                      |      ○       |  3h  |
+| [Updated css style](https://github.com/hotyann/yumemi-vue/commit/6e33b3545601a8c74d55b4843ce692235fbc545d)                                                                                                                                 |      ○       |  3h  |
 | Total                                                                                                                                                                                                                                      |              | 21h  |
 
 ## 参考にしたページ
