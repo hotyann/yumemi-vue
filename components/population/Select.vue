@@ -25,7 +25,7 @@
 </script>
 
 <template>
-  <div v-if="options.length" class="w-32 ml-3 md:ml-14">
+  <div v-if="options.length" class="w-32 ml-8 sm:ml-14">
     <select :value="modelValue" @change="onChanged">
       <option v-for="item in options" :key="item" :value="item">
         {{ item }}

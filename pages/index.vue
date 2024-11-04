@@ -24,6 +24,13 @@
    * @param {IParams} params prefCode、prefName、isCheckedを含んでいます
    */
   const onCheckboxChanged = async (params: IParams) => {
+    // 選択が変更された時、既存データを削除します
+    const index = graphData.findIndex(
+      (item) => item.prefCode === params.prefCode
+    );
+    if (index > -1) {
+      graphData.splice(index, 1);
+    }
     if (params.isChecked) {
       // チェックボックスが選択された時、人口構成データを取得します
       const res: any = await getPopulationPerYear(params.prefCode?.toString());
@@ -32,14 +39,6 @@
         prefName: params.prefName,
         data: res.result,
       });
-    } else {
-      // 選択が解除された時、データを削除します
-      const index = graphData.findIndex(
-        (item) => item.prefCode === params.prefCode
-      );
-      if (index > -1) {
-        graphData.splice(index, 1);
-      }
     }
   };
 </script>
@@ -54,7 +53,7 @@
       />
     </div>
     <!-- 人口構成グラフ -->
-    <div class="my-8 px-4 md:px-8">
+    <div class="my-8 px-4 md:px-8 lg:px-12 xl:px-16">
       <PopulationGraph :data="graphData" />
     </div>
   </NuxtLayout>
