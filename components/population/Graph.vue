@@ -121,7 +121,7 @@
         rules: [
           {
             condition: {
-              maxWidth: 500,
+              maxWidth: 607,
             },
             chartOptions: {
               yAxis: {
@@ -151,7 +151,7 @@
 <template>
   <article v-if="data.length">
     <PopulationSelect v-model="selectValue" :options="selectOptions" />
-    <section>
+    <section class="mt-4">
       <ClientOnly>
         <highcharts :options="chartOptions" />
       </ClientOnly>

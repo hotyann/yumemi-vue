@@ -27,8 +27,14 @@
 
 <template>
   <article>
-    <h1>都道府県</h1>
-    <section class="flex flex-wrap">
+    <h1
+      class="bg-gray-400 text-white inline-block px-3 py-1.5 rounded-sm tracking-widest"
+    >
+      都道府県
+    </h1>
+    <section
+      class="grid grid-cols-4 gap-x-4 gap-y-0.5 md:gap-x-16 lg:gap-x-28 xl:gap-x-40 mt-4"
+    >
       <PrefectureItem
         v-for="item in data"
         :key="item.prefCode"

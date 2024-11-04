@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  css: ['~/assets/style/global.css'],
   runtimeConfig: {
     public: {
       baseURL: 'https://yumemi-frontend-engineer-codecheck-api.vercel.app',
@@ -10,6 +11,7 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/yumemi-vue/',
     head: {
+      title: '人口推移グラフ',
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/yumemi-vue/favicon.ico' },
       ],
