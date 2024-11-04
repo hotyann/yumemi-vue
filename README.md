@@ -4,9 +4,13 @@
 
 Tech Stack: Nuxt 3 + Typescript + Axios + Highcharts + Vitest + Tailwind CSS
 
+<br>
+
 ## デプロイ先の URL
 
 https://hotyann.github.io/yumemi-vue/
+
+<br>
 
 ## プログラミング歴
 
@@ -22,8 +26,10 @@ https://hotyann.github.io/yumemi-vue/
 | [Completed data optimization and enhanced functionality of graph](https://github.com/hotyann/yumemi-vue/commit/ac0b3dc50bfd7f94833ac1dc9fd69952ca4ec810)                                                                                   |      ○       | 2.5h  |
 | [Unit test](https://github.com/hotyann/yumemi-vue/commit/4075950ff6984df8d19c1e1eda951dfaadbf7e01)                                                                                                                                         |              |  2h   |
 | [Updated css style](https://github.com/hotyann/yumemi-vue/commit/6e33b3545601a8c74d55b4843ce692235fbc545d)                                                                                                                                 |      ○       |  3h   |
-| [Code optimization]()                                                                                                                                                                                                                      |      ○       | 0.5h  |
+| [Code optimization](https://github.com/hotyann/yumemi-vue/commit/1b6fa0c64c1eba12b1740a1f2ecbbbc52fe4d5fe)                                                                                                                                 |      ○       | 0.5h  |
 | Total                                                                                                                                                                                                                                      |              | 21.5h |
+
+<br>
 
 ## 参考にしたページ
 
@@ -38,11 +44,15 @@ https://hotyann.github.io/yumemi-vue/
 9. [Getting Started | Guide | Vitest](https://vitest.dev/guide/)
 10. [Testing · Get Started with Nuxt](https://nuxt.com/docs/getting-started/testing)
 
+<br>
+
 ## 参考にしたリポジトリ
 
 1. [da-shina/nuxt3-resas-app](https://github.com/da-shina/nuxt3-resas-app)
 2. [qucode1/nuxt-api-route-issue](https://github.com/qucode1/nuxt-api-route-issue)
 3. [jcyenyen/Nuxt-investFinancialDashborad](https://github.com/jcyenyen/Nuxt-investFinancialDashborad)
+
+<br>
 
 ## AI を利用した場合
 
