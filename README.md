@@ -28,7 +28,7 @@ https://hotyann.github.io/yumemi-vue/
 | [Updated css style](https://github.com/hotyann/yumemi-vue/commit/6e33b3545601a8c74d55b4843ce692235fbc545d)                                                                                                                                 |      ○       |  3h   |
 | [Code optimization](https://github.com/hotyann/yumemi-vue/commit/1b6fa0c64c1eba12b1740a1f2ecbbbc52fe4d5fe)                                                                                                                                 |      ○       | 0.5h  |
 | [Checked if the data returned by the API is empty](https://github.com/hotyann/yumemi-vue/commit/4e2f21217ae0d5fe327435624da4fcf45a66f86f)                                                                                                  |      ○       | 0.5h  |
-| [Do not let HTTP errors block process]()                                                                                                                                                                                                   |      ○       | 0.5h  |
+| [Do not let HTTP errors block process](https://github.com/hotyann/yumemi-vue/commit/fbda9cb649d64bb55f9fa7ed15021519862101bc)                                                                                                              |      ○       | 0.5h  |
 | Total                                                                                                                                                                                                                                      |              | 22.5h |
 
 <br>
