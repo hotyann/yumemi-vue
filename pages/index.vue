@@ -17,7 +17,7 @@
   const graphData: Array<IGraphData> = reactive([]);
 
   // 都道府県データを取得します
-  const res: any = await getPrefectures();
+  const res: any = await getPrefectures().catch(() => {});
   let result: Array<IPrefecture> = [];
   if (Array.isArray(res?.result)) {
     result = res.result;
@@ -37,7 +37,9 @@
     }
     if (params.isChecked) {
       // チェックボックスが選択された時、人口構成データを取得します
-      const res: any = await getPopulationPerYear(params.prefCode?.toString());
+      const res: any = await getPopulationPerYear(
+        params.prefCode?.toString()
+      ).catch(() => {});
       if (res?.result) {
         graphData.push({
           prefCode: params.prefCode,
