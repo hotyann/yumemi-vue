@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+  import { debounce } from '~/utils/common';
+
   // Interfaces
   interface IParams {
     prefCode: number;
@@ -21,12 +23,15 @@
   const emit = defineEmits<IEmits>();
 
   // チェックボックスの選択が変更された時、親へ値を渡します
-  const onChanged = (): void => {
+  const fn = debounce(() => {
     emit('checkboxChange', {
       prefCode: props.prefCode,
       prefName: props.prefName,
       isChecked: isChecked.value,
     });
+  }, 300);
+  const onChanged = (): void => {
+    fn();
   };
 </script>
 
