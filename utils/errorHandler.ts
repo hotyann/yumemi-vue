@@ -1,9 +1,13 @@
+import type { AxiosError } from 'axios';
+
 /**
- * レスポンス エラーの処理
- * @param error
+ * レスポンスエラーの処理
+ * @param error - Axios エラーオブジェクト
  */
-export const axiosErrorHandler = (error: any) => {
-  switch (error?.response?.status) {
+export const axiosErrorHandler = (error: AxiosError): void => {
+  const status = error?.response?.status;
+
+  switch (status) {
     case 400: // 400 Bad Request
       alert(
         '[400 Bad Request] 必須パラメータの設定が漏れていないか、正しいフォーマットで設定できているか、等をご確認ください。'
@@ -21,6 +25,9 @@ export const axiosErrorHandler = (error: any) => {
       );
       break;
     default:
+      alert(
+        `[エラー] サーバーエラーが発生しました。ステータスコード: ${status || '不明'}`
+      );
       break;
   }
 };

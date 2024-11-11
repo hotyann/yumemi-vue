@@ -4,14 +4,17 @@ export default defineNuxtConfig({
   css: ['~/assets/style/global.css'],
   runtimeConfig: {
     public: {
-      baseURL: 'https://yumemi-frontend-engineer-codecheck-api.vercel.app',
-      apiKey: '8FzX5qLmN3wRtKjH7vCyP9bGdEaU4sYpT6cMfZnJ',
+      baseURL: process.env.BASE_URL,
+      apiKey: process.env.API_KEY,
     },
   },
   app: {
     baseURL: '/yumemi-vue/',
     head: {
       title: '人口推移グラフ',
+      htmlAttrs: {
+        lang: 'ja',
+      },
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/yumemi-vue/favicon.ico' },
       ],

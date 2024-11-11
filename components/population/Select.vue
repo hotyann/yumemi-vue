@@ -17,10 +17,11 @@
 
   /**
    * ドロップダウンの選択が変更された時、親にバインドされている値を更新します
-   * @param {any} event change event
+   * @param event - changeイベントオブジェクト
    */
-  const onChanged = (event: any): void => {
-    emit('update:modelValue', event?.target?.value);
+  const onChanged = (event: Event): void => {
+    const target = event.target as HTMLSelectElement;
+    emit('update:modelValue', target.value);
   };
 </script>
 

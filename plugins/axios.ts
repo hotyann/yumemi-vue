@@ -31,7 +31,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     (response) => {
       // ステータスコードが 2xx の範囲にある場合、この関数が起動します
       // レスポンス データの処理
-      return response.data;
+      return response;
     },
     (error) => {
       // ステータスコードが 2xx の範囲外の場合、この関数が起動します

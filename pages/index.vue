@@ -17,10 +17,10 @@
   const graphData: Array<IGraphData> = reactive([]);
 
   // 都道府県データを取得します
-  const res: any = await getPrefectures().catch(() => {});
+  const res = await getPrefectures().catch(() => {});
   let result: Array<IPrefecture> = [];
-  if (Array.isArray(res?.result)) {
-    result = res.result;
+  if (Array.isArray(res?.data?.result)) {
+    result = res.data.result;
   }
 
   /**
@@ -37,14 +37,14 @@
     }
     if (params.isChecked) {
       // チェックボックスが選択された時、人口構成データを取得します
-      const res: any = await getPopulationPerYear(
-        params.prefCode?.toString()
-      ).catch(() => {});
-      if (res?.result) {
+      const res = await getPopulationPerYear(params.prefCode?.toString()).catch(
+        () => {}
+      );
+      if (res?.data?.result) {
         graphData.push({
           prefCode: params.prefCode,
           prefName: params.prefName,
-          data: res.result,
+          data: res.data.result,
         });
       }
     }
